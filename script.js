@@ -1,3 +1,5 @@
+var darkmoded=true;
+
 //1 display number in text box
 function displayVal(num){
     // document.getElementById('display').value+=num;
@@ -9,56 +11,6 @@ function displayVal(num){
 function allClearDisplay(){
     // document.getElementById('display').value="";
     display.value="";
-
-    //body color
-    document.body.style.backgroundColor = ' #385585';
-    
-    //calculator background
-    // mainDiv=document.getElementsByClassName(`maindiv1`).style.backgroundColor='black';
-    // for(k=0;k<mainDiv.length;k++)
-    // {
-        //     mainDiv[k].style.backgroundColor='black';
-        // }
-        
-    //input color
-    document.getElementById(`display`).style.backgroundColor='#091a52';
-    
-    // maindiv
-    document.querySelector(`.maindiv1`).style.backgroundColor='#646a8f';
-
-    //number buttons
-    numBtns=document.getElementsByClassName(`numBtn`);
-    for(i=0;i<numBtns.length;i++)
-    {
-        numBtns[i].style.backgroundColor='#E0E0E0';
-        numBtns[i].style.color='#000000';
-        // numBtns[i].style.color='#383838';
-    }
-
-    //symbol button
-    document.getElementById(`symbtn`).style.backgroundColor='#f9db96';
-
-    //ac button
-    document.getElementById(`acbtn`).style.backgroundColor='#f17916';
-    document.getElementById(`acbtn`).style.color='#000000';
-
-    //darkmode and backspace buttons
-    actBtns=document.getElementsByClassName(`actbtn`);
-    for(j=0;j<actBtns.length;j++)
-    {
-        
-        actBtns[j].style.backgroundColor='#eaca15';
-        actBtns[j].style.color='#000000';
-    }
-
-    //operations buttons
-    opBtns=document.getElementsByClassName(`opbtn`);
-    for(i=0;i<opBtns.length;i++)
-    {
-        opBtns[i].style.backgroundColor='#ea9d29';
-        opBtns[i].style.color='#000000';
-        // numBtns[i].style.color='#383838';
-    }
 }
 
 //3 evaluate expression
@@ -81,69 +33,122 @@ function removeLast()
 //5 dark Mode
 function darkMode()
 {
-    //body color
-    document.body.style.backgroundColor ='#031201';
-    // document.body.style.backgroundColor ='#242424';
-    
-    //calculator background
-    // mainDiv=document.getElementsByClassName(`maindiv1`).style.backgroundColor='black';
-    // for(k=0;k<mainDiv.length;k++)
-    // {
-        //     mainDiv[k].style.backgroundColor='black';
-        // }
+    if(darkmoded==true)
+    {
+        //body color
+        document.body.style.backgroundColor = ' #385585';
         
-    //input color
-    document.getElementById(`display`).style.backgroundColor='#0c120c';
-
-     
-    // maindiv
-    document.querySelector(`.maindiv1`).style.backgroundColor='#648f77';
-
-    //number buttons
-    numBtns=document.getElementsByClassName(`numBtn`);
-    for(i=0;i<numBtns.length;i++)
-    {
-        numBtns[i].style.backgroundColor='#022222';
-        numBtns[i].style.color='#f7f996';
-        // numBtns[i].style.color='#383838';
-    }
-    
-
-    
-    //symbol button
-    document.getElementById(`symbtn`).style.backgroundColor='#f5b623';
-
-    //ac button
-    document.getElementById(`acbtn`).style.backgroundColor='#7c1d0a';
-    document.getElementById(`acbtn`).style.color='#ffffff';
-    
-
-
-    //darkmode and backspace buttons
-    actBtns=document.getElementsByClassName(`actbtn`);
-    for(j=0;j<actBtns.length;j++)
-    {
+        //calculator background
+        // mainDiv=document.getElementsByClassName(`maindiv1`).style.backgroundColor='black';
+        // for(k=0;k<mainDiv.length;k++)
+        // {
+            //     mainDiv[k].style.backgroundColor='black';
+            // }
+            
+        //input color
+        document.getElementById(`display`).style.backgroundColor='#091a52';
         
-        actBtns[j].style.backgroundColor='#093060';
-        // actBtns[j].style.backgroundColor='#ba670a';
-        actBtns[j].style.color='#ffffff';
+        // maindiv
+        document.querySelector(`.maindiv1`).style.backgroundColor='#646a8f';
+    
+        //number buttons
+        numBtns=document.getElementsByClassName(`numBtn`);
+        for(i=0;i<numBtns.length;i++)
+        {
+            numBtns[i].style.backgroundColor='#E0E0E0';
+            numBtns[i].style.color='#000000';
+            // numBtns[i].style.color='#383838';
+        }
+    
+        //symbol button
+        document.getElementById(`symbtn`).style.backgroundColor='#f9db96';
+    
+        //ac button
+        document.getElementById(`acbtn`).style.backgroundColor='#f17916';
+        document.getElementById(`acbtn`).style.color='#000000';
+    
+        //darkmode and backspace buttons
+        actBtns=document.getElementsByClassName(`actbtn`);
+        for(j=0;j<actBtns.length;j++)
+        {
+            
+            actBtns[j].style.backgroundColor='#eaca15';
+            actBtns[j].style.color='#000000';
+        }
+    
+        //operations buttons
+        opBtns=document.getElementsByClassName(`opbtn`);
+        for(i=0;i<opBtns.length;i++)
+        {
+            opBtns[i].style.backgroundColor='#ea9d29';
+            opBtns[i].style.color='#000000';
+            // numBtns[i].style.color='#383838';
+        }
+        darkmoded=false;
     }
-
-    //operations buttons
-    opBtns=document.getElementsByClassName(`opbtn`);
-    for(i=0;i<opBtns.length;i++)
+    else
     {
-        opBtns[i].style.backgroundColor='#0e0e1c';
-        opBtns[i].style.color='#f7f9f6';
-        // numBtns[i].style.color='#383838';
-    }
+        //body color
+        document.body.style.backgroundColor ='#031201';
+        // document.body.style.backgroundColor ='#242424';
+        
+        //calculator background
+        // mainDiv=document.getElementsByClassName(`maindiv1`).style.backgroundColor='black';
+        // for(k=0;k<mainDiv.length;k++)
+        // {
+            //     mainDiv[k].style.backgroundColor='black';
+            // }
+            
+        //input color
+        document.getElementById(`display`).style.backgroundColor='#0c120c';
+    
+         
+        // maindiv
+        document.querySelector(`.maindiv1`).style.backgroundColor='#648f77';
+    
+        //number buttons
+        numBtns=document.getElementsByClassName(`numBtn`);
+        for(i=0;i<numBtns.length;i++)
+        {
+            numBtns[i].style.backgroundColor='#022222';
+            numBtns[i].style.color='#f7f996';
+            // numBtns[i].style.color='#383838';
+        }
+        
+    
+        
+        //symbol button
+        document.getElementById(`symbtn`).style.backgroundColor='#f5b623';
+    
+        //ac button
+        document.getElementById(`acbtn`).style.backgroundColor='#7c1d0a';
+        document.getElementById(`acbtn`).style.color='#ffffff';
+        
+    
+    
+        //darkmode and backspace buttons
+        actBtns=document.getElementsByClassName(`actbtn`);
+        for(j=0;j<actBtns.length;j++)
+        {
+            
+            actBtns[j].style.backgroundColor='#093060';
+            // actBtns[j].style.backgroundColor='#ba670a';
+            actBtns[j].style.color='#ffffff';
+        }
+    
+        //operations buttons
+        opBtns=document.getElementsByClassName(`opbtn`);
+        for(i=0;i<opBtns.length;i++)
+        {
+            opBtns[i].style.backgroundColor='#0e0e1c';
+            opBtns[i].style.color='#f7f9f6';
+            // numBtns[i].style.color='#383838';
+        }
+
+        darkmoded=true;
 
     
+    }
 
-}
 
-//6 enter equal
-function enterKey()
-{
-    KeyboardEvent
 }
